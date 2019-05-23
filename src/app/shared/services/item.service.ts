@@ -9,6 +9,7 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   getItems() {
-    this.http.get('../../../assets/data.txt');
+    return this.http.get('../../../assets/data.txt', { responseType: "text"});
   }
+
 }
